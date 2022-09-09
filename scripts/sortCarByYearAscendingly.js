@@ -9,13 +9,14 @@ function sortCarByYearAscendingly(cars) {
   // Tulis code-mu disini
   for (let  i = 0; i < result.length; i++) {
     for (let j = 0; j < result.length - i - 1; j++) {
-      if (result[j + 1].year < result [j].year) {
+      if (result [j].year > result[j + 1].year ) {
         let tempObj = result[j]
         result[j] = result[j + 1]
         result[j + 1] = tempObj 
       }
     }
   }
+  console.table(result)
   // Rubah code ini dengan array hasil sorting secara ascending
   console.log(result)
   return result;
