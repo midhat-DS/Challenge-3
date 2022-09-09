@@ -7,13 +7,19 @@ function sortCarByYearAscendingly(cars) {
   const result = [...cars];
 
   // Tulis code-mu disini
+  var isSwapped = false;
   for (let  i = 0; i < result.length; i++) {
+    isSwapped = false;
     for (let j = 0; j < result.length - i - 1; j++) {
-      if (result [j].year > result[j + 1].year ) {
+      if (result [j].year > result[j + 1].year) {
         let tempObj = result[j]
         result[j] = result[j + 1]
         result[j + 1] = tempObj 
+        isSwapped = true;
       }
+    }
+    if(!isSwapped){
+      break;
     }
   }
   console.table(result)
