@@ -9,10 +9,7 @@ function filterCarByAvailability(cars) {
 
   for (let i = 0; i < cars.length; i++){
     if (cars[i].available){
-      console.log("cars ke-" + i + "available, push");
       result.push(cars[i]);
-    }else {
-      console.log("cars ke-" + i + "tidak available, skip");
     }
   }
   console.table(result);
